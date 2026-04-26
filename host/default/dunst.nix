@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.dunst = {
+  services.dunst = {
     enable = true;
 
     # Configuración general (sección [global])
