@@ -42,7 +42,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 programs.localsend.enable = true;
 services.xserver.enable = true;
 services.displayManager.gdm.enable = true;
-programs.hyprland.enable = true;
+#programs.hyprland.enable = true;
 services.flatpak.enable = true;
 
   # Configure network proxy if necessary
@@ -110,9 +110,8 @@ home-manager = {
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-	hyprland
+	#hyprland
 	git
-	#kitty
 	wofi
 	
 	firefox
