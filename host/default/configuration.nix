@@ -158,7 +158,7 @@ home-manager = {
     wget
 	#hyprland
 	git
-	wofi
+	#wofi
 	
 	firefox
 	pamixer

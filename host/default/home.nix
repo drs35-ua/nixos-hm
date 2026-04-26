@@ -10,6 +10,7 @@ in
 imports = [
     ./kitty.nix
     ./waybar.nix
+    ./wofi.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -42,9 +43,12 @@ imports = [
     blueman
     bibata-cursors
     ruby
-    swww
     waypaper
-    
+    nwg-look
+    vulkan-tools
+    btop
+    htop
+    libnotify
   ];
 
 
