@@ -10,7 +10,6 @@ in
 imports = [
     ./kitty.nix
     ./waybar.nix
-    ./hyprland.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -18,7 +17,10 @@ imports = [
   home.homeDirectory = "/home/dani";
   nixpkgs.config.allowUnfree = true;
 
-
+  wayland.windowManager.hyprland = {
+    enable = true;
+    extraConfig = builtins.readFile ./hyprland.conf;
+  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
