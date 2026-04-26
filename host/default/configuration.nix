@@ -76,6 +76,14 @@ services.flatpak.enable = true;
     variant = "";
   };
 
+
+fonts.packages = with pkgs; [
+        font-awesome
+        material-icons
+        nerd-fonts.fira-code
+        noto-fonts
+];
+
   # Configure console keymap
   console.keyMap = "es";
 
