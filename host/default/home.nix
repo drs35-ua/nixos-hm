@@ -1,9 +1,15 @@
 { config, pkgs, ... }:
 
+let
+  scriptsDir = ./scripts;  # ruta relativa a la carpeta scripts
+in
+
+
 {
 
 imports = [
     ./kitty.nix
+    ./waybar.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -80,16 +86,34 @@ programs.bash = {
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+    ".config/waybar/scripts/warp-status.sh" = {
+      source = "${scriptsDir}/waybar/warp-status.sh";
+      executable = true;
+    };
+    ".config/waybar/scripts/warp-toggle.sh" = {
+      source = "${scriptsDir}/waybar/warp-toggle.sh";
+      executable = true;
+    };
+    ".config/waybar/scripts/volume_notify.sh" = {
+      source = "${scriptsDir}/waybar/volume_notify.sh";
+      executable = true;
+    };
+    ".config/waybar/scripts/weather/get_weather.rb" = {
+      source = "${scriptsDir}/waybar/weather/get_weather.rb";
+      executable = true;
+    };
 
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
+      
+    ".config/waybar/scripts/weather/ui_icons.json" = {
+      source = ./scripts/waybar/weather/ui_icons.json;
+    };
+    
+    ".config/waybar/scripts/weather/weather_icons.json" = {
+      source = ./scripts/waybar/weather/weather_icons.json;
+    };
+    ".config/waybar/scripts/weather/weather_settings.jsonc" = {
+      source = ./scripts/waybar/weather/weather_settings.jsonc;
+    };
   };
 
   # Home Manager can also manage your environment variables through

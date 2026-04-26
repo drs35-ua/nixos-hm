@@ -106,7 +106,7 @@ home-manager = {
 	git
 	#kitty
 	wofi
-	waybar
+	
 	firefox
 	pamixer
 	pavucontrol
