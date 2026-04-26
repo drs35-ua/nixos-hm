@@ -39,7 +39,7 @@
         on-scroll-down = "pamixer -d 5 && ~/.config/waybar/scripts/volume_notify.sh";
       };
 
-      custom/warp = {
+      "custom/warp" = {
         exec = "~/.config/waybar/scripts/warp-status.sh";
         interval = 3;
         return-type = "json";
@@ -55,7 +55,7 @@
         tooltip = true;
       };
 
-      hyprland/workspaces = {
+      "hyprland/workspaces" = {
         format = "{icon}";
         format-icons = {
           "1" = "I";
@@ -74,19 +74,19 @@
         disable-scroll = true;
       };
 
-      custom/poweroff = {
+      "custom/poweroff" = {
         format = "  ";
         on-click = "poweroff";
         tooltip = false;
       };
 
-      custom/restart = {
+      "custom/restart" = {
         format = "  ";
         on-click = "reboot";
         tooltip = false;
       };
 
-      custom/weather = {
+      "custom/weather" = {
         format = "{}";
         tooltip = true;
         return-type = "json";
@@ -95,86 +95,5 @@
         interval = 900;
       };
     };
-
-    # Estilo CSS (se generará automáticamente en ~/.config/waybar/style.css)
-    style = ''
-        @define-color main_color #89b4fa;
-        @define-color second_color #cdd6f4;
-        @define-color first_color #a6e3a1;
-
-      * {
-        all: initial;
-        font-size: 15px;
-        font-family: Liberation Mono;
-      }
-
-      #workspaces button:hover {
-        background-color: @main_color;
-        color: @second_color;
-      }
-
-      #workspaces button:hover,
-      #workspaces button:hover label {
-        color: @second_color;
-      }
-
-      #workspaces button {
-        padding: 0 10px;
-        border-bottom: 3px solid rgba(249, 159, 57, 0.00);
-        min-width: 25px;
-      }
-
-      #workspaces button.active {
-        border-bottom: 3px solid @main_color;
-        border-radius: 0px;
-      }
-
-      tooltip {
-        background-color: #1c1c1c;
-        border-radius: 8px;
-        padding: 30px;
-      }
-
-      #network:hover, #custom-restart:hover {
-        background-color: @main_color;
-        color: @second_color;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.3);
-      }
-
-      #custom-poweroff:hover {
-        background-color: rgb(232, 18, 18);
-        color: rgb(30,30,46);
-        box-shadow: 0 2px 15px rgba(0,0,0,0.3);
-      }
-
-      window#waybar {
-        background: #1c1c1c;
-      }
-
-      #clock, #pulseaudio, #network, #battery, #custom-poweroff, #temperature, #custom-restart, #custom-weather, #custom-warp {
-        padding: 10px 10px;
-      }
-
-      #custom-audio-device {
-        min-width: 2em;
-        margin-left: -10px;
-        margin-right: 5px;
-      }
-
-      @keyframes blink {
-        0% { opacity: 1; }
-        50% { opacity: 0.3; }
-        100% { opacity: 1; }
-      }
-
-      #custom-warp {
-        transition: all 0.2s ease;
-      }
-
-      #custom-warp.connected {
-        color: #a6e3a1;
-        color: @foreground;
-      }
-    '';
   };
 }
