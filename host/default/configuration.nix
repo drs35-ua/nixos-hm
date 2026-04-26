@@ -12,8 +12,21 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+
+boot.loader.grub = {
+  enable = true;
+  efiSupport = true;          # Necesario para UEFI
+  useOSProber = true;
+  efiInstallAsRemovable = false; # No lo hagas removable a>
+  device = "nodev";           # Para UEFI se usa "nodev"
+  configurationLimit = 10;    # Número de generaciones a m>
+  # Opcional: mostrar submenú (por defecto sí)
+  # enableCryptodisk = true;  # Si usas cifrado
+};
+
+
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
