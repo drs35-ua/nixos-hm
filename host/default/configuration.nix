@@ -26,6 +26,38 @@ boot.loader.grub = {
   # enableCryptodisk = true;  # Si usas cifrado
 };
 
+nix.gc = {
+  automatic = true;
+  dates = "weekly";
+  options = "--delete-older-than 7d";
+};
+
+
+hardware.graphics = {
+    enable = true;
+    enable32Bit = true; # Necesario para Steam y juegos de>
+  };
+
+services.xserver.videoDrivers = [ "nvidia" ];
+programs.nix-ld.enable = true;
+
+hardware.nvidia = {
+    # El "modesetting" es obligatorio.
+    modesetting.enable = true;
+
+    # Usar los drivers de código abierto (funciona muy bie>
+    # Si encuentras problemas, cámbialo a "false" para usa>
+    open = true;
+
+    # Activar el menú de configuración de NVIDIA (opcional)
+    nvidiaSettings = true;
+
+    # Forzar el uso del driver "stable". 
+    package = config.boot.kernelPackages.nvidiaPackages.st>
+  };
+
+hardware.nvidia.powerManagement.enable = true;
+
 
 
   # Use latest kernel.
