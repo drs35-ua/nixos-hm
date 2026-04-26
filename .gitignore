@@ -1,6 +1,6 @@
 # Archivos de hardware
-**/hardware-configuration.nix
-hardware-configuration.nix
+#**/hardware-configuration.nix
+#hardware-configuration.nix
 
 # Build results
 result
