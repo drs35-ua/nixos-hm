@@ -11,6 +11,7 @@ imports = [
     ./kitty.nix
     ./waybar.nix
     ./wofi.nix
+    ./dunst.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -36,7 +37,6 @@ imports = [
   # environment.
   home.packages = with pkgs; [
     brightnessctl
-    dunst
     swww
     sunsetr
     vlc
