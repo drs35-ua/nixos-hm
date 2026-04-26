@@ -9,7 +9,7 @@
       position = "top";
       modules-left = [ "custom/weather" "clock" "custom/warp" ];
       modules-center = [ "hyprland/workspaces" ];
-      modules-right = [ "temperature" "pulseaudio" "custom/restart" "custom/poweroff" ];
+      modules-right = [ "temperature" "battery" "pulseaudio" "custom/restart" "custom/poweroff" ];
 
       clock = {
         format = "{:%H:%M  %d/%m/%y}";
@@ -95,6 +95,19 @@
         on-click = "~/.config/waybar/scripts/weather/get_weather.rb --next";
         interval = 900;
       };
+
+      battery = {
+          format = "{capacity}% {icon}";
+          format-icons = [ "" "" "" "" "" ];
+          interval = 60;
+          tooltip = true;
+          states = {
+            warning = 20;
+            critical = 10;
+          };
+          on-click = "kitty -e btop";  # Ejemplo: abre monitor al hacer clic
+        };
+
     };
     };
 
@@ -155,7 +168,7 @@
         background: @background;
       }
 
-      #clock, #pulseaudio, #network, #battery, #custom-poweroff, #temperature, #custom-restart, #custom-weather, #custom-warp {
+      #clock, #pulseaudio, #network, #battery, #custom-poweroff, #temperature, #custom-restart, #custom-weather, #custom-warp, #battery {
         padding: 10px 10px;
       }
 
