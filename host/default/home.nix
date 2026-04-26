@@ -59,12 +59,7 @@ imports = [
     xdg-user-dirs-gtk
   ];
 
-dconf.settings = {
-  "org/gnome/desktop/interface" = {
-    color-scheme = "prefer-dark";
-    gtk-theme = "Adwaita-dark";  # o el tema oscuro que uses
-  };
-};
+
 
     # Configuración de Bash (manera correcta en Home Manager actual)
   # Configuración de Bash
