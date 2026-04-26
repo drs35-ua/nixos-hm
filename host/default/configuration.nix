@@ -53,7 +53,7 @@ hardware.nvidia = {
     nvidiaSettings = true;
 
     # Forzar el uso del driver "stable". 
-    package = config.boot.kernelPackages.nvidiaPackages.st>
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
 hardware.nvidia.powerManagement.enable = true;
