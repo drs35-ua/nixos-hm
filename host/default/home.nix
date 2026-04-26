@@ -42,6 +42,7 @@ imports = [
    pkgs.vlc
    pkgs.blueman
    pkgs.bibata-cursors
+   pkgs.ruby
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
