@@ -51,6 +51,8 @@ imports = [
     libnotify
     mission-center
     adw-gtk3
+    nemo-with-extensions
+	  dolphin-emu
   ];
 
 

@@ -163,8 +163,7 @@ home-manager = {
 	firefox
 	pamixer
 	pavucontrol
-	nemo-with-extensions
-	dolphin-emu
+	
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
