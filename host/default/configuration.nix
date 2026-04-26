@@ -44,6 +44,7 @@ services.xserver.enable = true;
 services.displayManager.gdm.enable = true;
 programs.hyprland.enable = true;
 services.flatpak.enable = true;
+services.cloudflare-warp.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
