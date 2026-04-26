@@ -49,6 +49,8 @@ imports = [
     btop
     htop
     libnotify
+    mission-center
+    adw-gtk3
   ];
 
 
