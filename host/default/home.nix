@@ -57,6 +57,7 @@ imports = [
     thunderbird
     xdg-user-dirs   
     xdg-user-dirs-gtk
+    vscode
   ];
 
 
