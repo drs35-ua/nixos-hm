@@ -11,12 +11,6 @@ imports = [
   home.homeDirectory = "/home/dani";
   nixpkgs.config.allowUnfree = true;
 
-  # Alias de shell
- # home.shellAliases = {
- #   nixconf = "nano ~/.nixflakes/host/default/configuration.nix";
- #   nixrebuild = "sudo nixos-rebuild switch --flake ~/.nixflakes#nixos";
- #   nixhome = "nano ~/.nixflakes/host/default/home.nix";
- # };
 
 
   # This value determines the Home Manager release that your configuration is
@@ -33,6 +27,12 @@ imports = [
   home.packages = [
    
    pkgs.brightnessctl
+   pkgs.dunst
+   pkgs.swww
+   pkgs.sunsetr
+   pkgs.vlc
+   pkgs.blueman
+   pkgs.bibata-cursors
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

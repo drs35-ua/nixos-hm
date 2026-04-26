@@ -21,6 +21,22 @@
   networking.hostName = "nixos"; # Define your hostname.
 
 
+
+hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;  # Powers the adapter at boot
+    settings = {
+      General = {   
+        Name = "MyNixOS-Laptop"; # Your PC's Bluetooth name
+        ControllerMode = "dual"; # Supports both BR/EDR and LE
+        Experimental = true;   # Required for some features
+      };
+      Policy = {
+        AutoEnable = true;  # Automatically enables all adapters
+      };
+    };
+  }
+
 nix.settings.experimental-features = ["nix-command" "flakes"];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 programs.localsend.enable = true;
