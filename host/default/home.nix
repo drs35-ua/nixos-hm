@@ -59,6 +59,7 @@ imports = [
     xdg-user-dirs-gtk
     vscode
     glib
+    gsettings-desktop-schemas
   ];
 
 
