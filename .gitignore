@@ -1,0 +1,38 @@
+# Archivos de hardware
+**/hardware-configuration.nix
+hardware-configuration.nix
+
+# Build results
+result
+result-*
+
+# Editor temp files
+*.swp
+*.swo
+*~
+.#*
+\#*#
+
+# direnv
+.envrc
+.direnv/
+.env
+
+# Nix generated
+/nix
+
+# Secrets
+*.key
+*.pem
+*.crt
+*.secret
+secrets.nix
+
+# Backups
+*.bak
+*.old
+
+# SSH keys (if accidentally placed)
+.ssh/
+id_*
+known_hosts
