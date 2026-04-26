@@ -53,6 +53,10 @@ imports = [
     adw-gtk3
     nemo-with-extensions
 	  dolphin-emu
+    protonplus
+    thunderbird
+    xdg-user-dirs   
+    xdg-user-dirs-gtk
   ];
 
 
