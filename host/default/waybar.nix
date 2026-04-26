@@ -4,6 +4,7 @@
   programs.waybar = {
     enable = true;
     settings = {
+        mainBar = {
       layer = "top";
       position = "top";
       modules-left = [ "custom/weather" "clock" "custom/warp" ];
@@ -94,6 +95,7 @@
         on-click = "~/.config/waybar/scripts/weather/get_weather.rb --next";
         interval = 900;
       };
+    };
     };
 
     # Estilo CSS (sin dependencia externa, colores fijos basados en Catppuccin Mocha)
