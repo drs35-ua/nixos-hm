@@ -60,6 +60,7 @@ imports = [
     vscode
     glib
     gsettings-desktop-schemas
+	fastfetch
   ];
 
 
