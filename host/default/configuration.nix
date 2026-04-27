@@ -33,7 +33,16 @@ nix.gc = {
 };
 
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml";
+  stylix = {
+    enable = true;
+    # Configuración mínima (imagen de fondo)
+    #image = ./path/to/your/wallpaper.png;
+    # Esquema de colores base16 (opcional pero recomendado)
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml";
+    # Activa estilos para programas compatibles de forma automática (recomendado)
+    autoEnable = true;
+  };
+
   #stylix.image = /ruta/que/waypaper/te/ha/dado;
   # Habilitar portales de escritorio (necesario para Wayland y apps GTK)
   xdg.portal = {
