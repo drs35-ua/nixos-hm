@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+  scheme = config.stylix.base16Scheme;
+in
 
 {
   programs.waybar = {
