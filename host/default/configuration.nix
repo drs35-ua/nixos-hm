@@ -168,7 +168,7 @@ home-manager = {
 	firefox
 	pamixer
 	pavucontrol
-	
+	mission-center
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
