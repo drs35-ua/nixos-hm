@@ -49,11 +49,13 @@ imports = [
     bibata-cursors
     ruby
     waypaper
-    
+    gnome-software
     vulkan-tools
     btop
     htop
     libnotify
+    nwg-look
+    wallust
     
     adw-gtk3
     nemo-with-extensions
