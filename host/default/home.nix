@@ -57,6 +57,11 @@ imports = [
     nwg-look
     wallust
     
+    gnome-disk-utility
+    udiskie
+    ntfs3g
+    gnome-calendar
+    
     adw-gtk3
     nemo-with-extensions
 	  dolphin-emu
