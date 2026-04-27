@@ -61,6 +61,7 @@ imports = [
     glib
     gsettings-desktop-schemas
 	fastfetch
+    dconf
   ];
 
 
