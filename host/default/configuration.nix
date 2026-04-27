@@ -82,16 +82,20 @@ hardware.bluetooth = {
     };
   };
 
-nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-programs.localsend.enable = true;
-services.xserver.enable = true;
-services.displayManager.gdm.enable = true;
-programs.hyprland.enable = true;
-services.flatpak.enable = true;
-services.cloudflare-warp.enable = true;
-services.gvfs.enable = true;
-security.rtkit.enable = true;
+
+
+  programs.hyprland.enable = true;
+  programs.dconf.enable = true;
+  programs.localsend.enable = true;
+
+  services.xserver.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.flatpak.enable = true;
+  services.cloudflare-warp.enable = true;
+  services.gvfs.enable = true;
+  security.rtkit.enable = true;
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
