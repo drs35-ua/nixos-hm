@@ -34,7 +34,7 @@ nix.gc = {
 
 
   stylix = {
-    enable = true;
+    enable = false;
     # Configuración mínima (imagen de fondo)
     #image = ./path/to/your/wallpaper.png;
     # Esquema de colores base16 (opcional pero recomendado)

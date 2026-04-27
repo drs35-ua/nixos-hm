@@ -24,6 +24,9 @@ imports = [
     extraConfig = builtins.readFile ./hyprland.conf;
   };
 
+
+
+
   
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -98,7 +101,7 @@ programs.bash = {
   '';
 };
 
-  stylix.targets.waybar.enable = true;
+  #stylix.targets.waybar.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

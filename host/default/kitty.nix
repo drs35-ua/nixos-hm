@@ -6,7 +6,7 @@
     
     # Configuración de fuente (opcional)
     font = {
-     # name = "JetBrains Mono";
+      name = "JetBrains Mono";
       size = 12;
     };
     
