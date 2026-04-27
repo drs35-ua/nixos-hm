@@ -33,6 +33,19 @@ nix.gc = {
 };
 
 
+  # Habilitar portales de escritorio (necesario para Wayland y apps GTK)
+  xdg.portal = {
+    enable = true;
+    # Configuración para Hyprland (puedes usar "wlr" si no funciona)
+    config = {
+      hyprland.default = [ "hyprland" "gtk" ];
+    };
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+    ];
+  };
+
 hardware.graphics = {
     enable = true;
     enable32Bit = true; # Necesario para Steam y juegos de>
