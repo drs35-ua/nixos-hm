@@ -49,7 +49,7 @@ imports = [
     bibata-cursors
     ruby
     waypaper
-    nwg-look
+    
     vulkan-tools
     btop
     htop

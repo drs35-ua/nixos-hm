@@ -164,7 +164,7 @@ home-manager = {
 	#hyprland
 	git
 	#wofi
-	
+	nwg-look
 	firefox
 	pamixer
 	pavucontrol
