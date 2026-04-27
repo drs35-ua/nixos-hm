@@ -38,7 +38,7 @@ imports = [
   # environment.
   home.packages = with pkgs; [
     brightnessctl
-    swww
+    awww
     sunsetr
     vlc
     blueman

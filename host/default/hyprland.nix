@@ -49,7 +49,7 @@
     #################
     ### AUTOSTART ###
     #################
-    exec-once = swww-daemon
+    exec-once = awww-daemon
     exec-once = waybar;
     exec-once = waypaper --restore
     exec-once = dunst
