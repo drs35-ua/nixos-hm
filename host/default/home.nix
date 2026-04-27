@@ -61,7 +61,7 @@ imports = [
     udiskie
     ntfs3g
     gnome-calendar
-    
+
     adw-gtk3
     nemo-with-extensions
 	  dolphin-emu
@@ -74,6 +74,7 @@ imports = [
     gsettings-desktop-schemas
 	fastfetch
     dconf
+    mission-center
   ];
 
 
