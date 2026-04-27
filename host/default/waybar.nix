@@ -114,15 +114,15 @@
     # Estilo CSS (sin dependencia externa, colores fijos basados en Catppuccin Mocha)
     style = ''
       /* Definiciones de colores personalizadas (eliminada dependencia de wallust) */
-      @define-color main_color #89b4fa;   /* Azul suave */
-      @define-color second_color #cdd6f4; /* Texto claro */
-      @define-color first_color #a6e3a1;  /* Verde */
-      @define-color background #1c1c1c;   /* Fondo oscuro */
+      @define-color main_color #${scheme.base0D};   /* acento principal */
+      @define-color second_color #${scheme.base05}; /* texto principal */
+      @define-color first_color #${scheme.base0B};  /* verde/acento secundario */
+      @define-color background #${scheme.base00};
 
       * {
         all: initial;
         font-size: 15px;
-        font-family: Liberation Mono;
+        font-family: "${config.stylix.fonts.monospace.name}";
       }
 
       #workspaces button:hover {
