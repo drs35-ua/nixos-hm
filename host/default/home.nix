@@ -57,7 +57,7 @@ imports = [
     udiskie
     ntfs3g
     gnome-calendar
-
+    hyprlauncher
     adw-gtk3
     nemo-with-extensions
 	  dolphin-emu
