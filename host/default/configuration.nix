@@ -41,6 +41,7 @@ nix.gc = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml";
     # Activa estilos para programas compatibles de forma automática (recomendado)
     autoEnable = true;
+    targets.gnome.enable = false;
   };
 
   #stylix.image = /ruta/que/waypaper/te/ha/dado;
