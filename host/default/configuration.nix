@@ -33,6 +33,8 @@ nix.gc = {
 };
 
 
+  stylix.base16Scheme = ”${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml”;
+  #stylix.image = /ruta/que/waypaper/te/ha/dado;
   # Habilitar portales de escritorio (necesario para Wayland y apps GTK)
   xdg.portal = {
     enable = true;
