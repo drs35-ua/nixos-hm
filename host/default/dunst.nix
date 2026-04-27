@@ -7,7 +7,7 @@
     # Configuración general (sección [global])
     settings = {
       global = {
-        font = "Monospace 10";
+       # font = "Monospace 10";
         allow_markup = true;
         format = "<b>%s</b>\n%b";
         alignment = "left";
@@ -31,8 +31,8 @@
         horizontal_padding = 15;
         text_icon_padding = 0;
         frame_width = 0;
-        frame_color = "#424245";
-        separator_color = "frame";
+       # frame_color = "#424245";
+        #separator_color = "frame";
         sort = true;
         idle_threshold = 120;
         monitor = 0;
@@ -44,7 +44,7 @@
         offset = "20x20";
         shrink = false;
         notification_limit = 20;
-        highlight = "#908AB5";
+        #highlight = "#908AB5";
       };
 
       # Atajos de teclado
@@ -57,15 +57,15 @@
 
       # Urgencias
       urgency_low = {
-        background = "#1c1c1c";
+       # background = "#1c1c1c";
         timeout = 5;
       };
       urgency_normal = {
-        background = "#1C1C1E";
+       # background = "#1C1C1E";
         timeout = 8;
       };
       urgency_critical = {
-        background = "#4C4A63";
+       # background = "#4C4A63";
         timeout = 0;
       };
     };
