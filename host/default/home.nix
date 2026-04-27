@@ -52,7 +52,7 @@ imports = [
     libnotify
     nwg-look
     wallust
-    
+    gnome-themes-extra
     gnome-disk-utility
     udiskie
     ntfs3g
