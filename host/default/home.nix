@@ -78,6 +78,13 @@ imports = [
 
 
 
+dconf.settings = {
+  "org/gnome/desktop/interface" = {
+    color-scheme = "prefer-dark";
+  };
+};
+
+
     # Configuración de Bash (manera correcta en Home Manager actual)
   # Configuración de Bash
 programs.bash = {
