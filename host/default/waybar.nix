@@ -112,6 +112,85 @@
     };
 
     # Estilo CSS (sin dependencia externa, colores fijos basados en Catppuccin Mocha)
-    style = "";
+    style = ''
+      /* Definiciones de colores personalizadas (eliminada dependencia de wallust) */
+      @define-color main_color #89b4fa;   /* Azul suave */
+      @define-color second_color #cdd6f4; /* Texto claro */
+      @define-color first_color #a6e3a1;  /* Verde */
+      @define-color background #1c1c1c;   /* Fondo oscuro */
+
+      * {
+        all: initial;
+        font-size: 15px;
+        font-family: Liberation Mono;
+      }
+
+      #workspaces button:hover {
+        background-color: @main_color;
+        color: @second_color;
+      }
+
+      #workspaces button:hover,
+      #workspaces button:hover label {
+        color: @second_color;
+      }
+
+      #workspaces button {
+        padding: 0 10px;
+        border-bottom: 3px solid rgba(249, 159, 57, 0.00);
+        min-width: 25px;
+      }
+
+      #workspaces button.active {
+        border-bottom: 3px solid @main_color;
+        border-radius: 0px;
+      }
+
+      tooltip {
+        background-color: @background;
+        border-radius: 8px;
+        padding: 30px;
+      }
+
+      #network:hover, #custom-restart:hover {
+        background-color: @main_color;
+        color: @second_color;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+      }
+
+      #custom-poweroff:hover {
+        background-color: rgb(232, 18, 18);
+        color: rgb(30,30,46);
+        box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+      }
+
+      window#waybar {
+        background: @background;
+      }
+
+      #clock, #pulseaudio, #network, #battery, #custom-poweroff, #temperature, #custom-restart, #custom-weather, #custom-warp, #battery {
+        padding: 10px 10px;
+      }
+
+      #custom-audio-device {
+        min-width: 2em;
+        margin-left: -10px;
+        margin-right: 5px;
+      }
+
+      @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.3; }
+        100% { opacity: 1; }
+      }
+
+      #custom-warp {
+        transition: all 0.2s ease;
+      }
+
+      #custom-warp.connected {
+        color: @first_color;
+      }
+    '';
   };
 }
