@@ -74,6 +74,7 @@ imports = [
 	fastfetch
     dconf
     mission-center
+    resources
   ];
 
 dconf.enable = true;
@@ -165,4 +166,28 @@ programs.bash = {
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+
+  programs = {
+    ssh = {
+      enable = true;
+      addKeysToAgent = "yes";
+      extraConfig = ''
+        Host github.com
+          IdentityFile ~/.ssh/id_ed25519
+      '';
+    };
+    git = {
+      enable = true;
+      userName = "drs35-ua";
+      userEmail = "onsun99@gmail.com";
+      extraConfig = {
+        core = {
+          sshCommand = "ssh -F ~/.ssh/config";  # Usa la config SSH que definiste
+        };
+      };
+    };
+  };
+
+  services.ssh-agent.enable = true; 
 }
