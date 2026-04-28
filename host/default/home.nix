@@ -75,6 +75,8 @@ imports = [
     dconf
     mission-center
     resources
+	#themechanger
+	xdg-desktop-portal-gtk
   ];
 
 dconf.enable = true;
