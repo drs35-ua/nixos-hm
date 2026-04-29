@@ -147,6 +147,12 @@ programs.bash = {
     ".config/waybar/scripts/weather/weather_settings.jsonc" = {
       source = ./scripts/waybar/weather/weather_settings.jsonc;
     };
+
+    ".config/wallust/templates" = {
+      source = ./modules/templates;
+      recursive = true; 
+    };
+
   };
 
   # Home Manager can also manage your environment variables through

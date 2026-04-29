@@ -16,7 +16,7 @@ in {
   '';
 
   # Copiar los archivos .template desde la carpeta externa
-  xdg.configFile."wallust/templates/waybar.css".source = "${templatesDir}/waybar.css.template";
-  xdg.configFile."wallust/templates/dunstrc".source = "${templatesDir}/dunstrc.template";
-  xdg.configFile."wallust/templates/hyprland.conf".source = "${templatesDir}/hyprland.conf.template";
+  #xdg.configFile."wallust/templates/waybar.css".source = "${templatesDir}/waybar.css.template";
+  #xdg.configFile."wallust/templates/dunstrc".source = "${templatesDir}/dunstrc.template";
+  #xdg.configFile."wallust/templates/hyprland.conf".source = "${templatesDir}/hyprland.conf.template";
 }
