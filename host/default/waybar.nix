@@ -113,11 +113,13 @@
 
     # Estilo CSS (sin dependencia externa, colores fijos basados en Catppuccin Mocha)
     style = ''
-      /* Definiciones de colores personalizadas (eliminada dependencia de wallust) */
-      @define-color main_color #89b4fa;   /* Azul suave */
-      @define-color second_color #cdd6f4; /* Texto claro */
-      @define-color first_color #a6e3a1;  /* Verde */
+      @import url("colors-wallust.css");
+      
       @define-color background #1c1c1c;   /* Fondo oscuro */
+
+      @define-color main_color @color12;
+      @define-color second_color @foreround;
+      @define-color first_color @color10;
 
       * {
         all: initial;
