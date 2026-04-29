@@ -82,6 +82,7 @@ imports = [
 	xdg-desktop-portal-gtk
   dunst
   kora-icon-theme
+    pulseaudio
   ];
 
 dconf.enable = true;

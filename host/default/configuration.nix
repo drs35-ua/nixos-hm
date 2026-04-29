@@ -90,7 +90,15 @@ hardware.nvidia.powerManagement.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
 
+#Audio del bueno
+services.pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
 
+};
+services.pulseaudio.enable = false;
 
 hardware.bluetooth = {
     enable = true;
