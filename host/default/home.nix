@@ -13,7 +13,7 @@ imports = [
     ./wofi.nix
     #./dunst.nix
     ./modules/color-dinamico/wallust.nix
-     # ./modules/color-dinamico/waypaper.nix
+    ./modules/color-dinamico/waypaper.nix
     ./modules/color-dinamico/scripts.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should

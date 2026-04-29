@@ -2,14 +2,12 @@
 
 let
   # Ruta absoluta al archivo real (dentro de tu flake)
-  waypaperConfigFile = "waypaper-config.ini";
+  realConfig = "/home/dani/.nixflakes/host/default/etc/waypaper-config.ini";
 in
 {
-  # Elimina o comenta la línea anterior con xdg.configFile ... text = ...
-  # y usa home.file (o xdg.configFile) con mkOutOfStoreSymlink:
-
-  xdg.configFile."waypaper/config.ini" = {
-    source = config.lib.file.mkOutOfStoreSymlink waypaperConfigFile;
-    # force = true;  # si ya existe un enlace previo, sobrescríbelo
+  # Usa home.file en lugar de xdg.configFile si quieres más control
+  home.file.".config/waypaper/config.ini" = {
+    source = config.lib.file.mkOutOfStoreSymlink realConfig;
+    force = true;   # Sobrescribe si ya existe
   };
 }
