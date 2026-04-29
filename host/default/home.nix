@@ -81,6 +81,7 @@ imports = [
 	#themechanger
 	xdg-desktop-portal-gtk
   dunst
+  kora-icon-theme
   ];
 
 dconf.enable = true;
