@@ -1,37 +1,15 @@
-{ config, ... }:
+{ config, pkgs, ... }:
+
+let
+  # Ruta absoluta al archivo real (dentro de tu flake)
+  waypaperConfigFile = "waypaper-config.ini";
+in
 {
+  # Elimina o comenta la línea anterior con xdg.configFile ... text = ...
+  # y usa home.file (o xdg.configFile) con mkOutOfStoreSymlink:
+
   xdg.configFile."waypaper/config.ini" = {
-    text = ''
-      [Settings]
-      language = en
-      backend = awww
-      folder = ~/Pictures/fondos
-      monitors = All
-      wallpaper = ~/Pictures/fondos/wallhaven-9o82g1.jpg
-      show_path_in_tooltip = True
-      fill = fill
-      sort = name
-      color = #ffffff
-      subfolders = False
-      all_subfolders = False
-      show_hidden = False
-      show_gifs_only = False
-      zen_mode = False
-      post_command = ~/.config/hypr/scripts/update_wallpaper.sh
-      number_of_columns = 3
-      swww_transition_type = any
-      swww_transition_step = 63
-      swww_transition_angle = 0
-      swww_transition_duration = 2
-      swww_transition_fps = 60
-      mpvpaper_sound = False
-      mpvpaper_options = 
-      use_xdg_state = False
-      stylesheet = /home/dani/.config/waypaper/style.css
-      keybindings = ~/.config/waypaper/keybindings.ini
-
-
-    '';
-    #force = true;   # ¡Ahora sí, dentro del objeto!
+    source = config.lib.file.mkOutOfStoreSymlink waypaperConfigFile;
+    # force = true;  # si ya existe un enlace previo, sobrescríbelo
   };
 }
