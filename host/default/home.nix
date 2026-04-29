@@ -11,7 +11,7 @@ imports = [
     ./kitty.nix
     ./waybar.nix
     ./wofi.nix
-    ./dunst.nix
+    #./dunst.nix
     ./modules/color-dinamico/wallust.nix
      ./modules/color-dinamico/waypaper.nix
     ./modules/color-dinamico/scripts.nix
@@ -80,6 +80,7 @@ imports = [
     resources
 	#themechanger
 	xdg-desktop-portal-gtk
+  dunst
   ];
 
 dconf.enable = true;
