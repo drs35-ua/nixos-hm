@@ -1,0 +1,60 @@
+[global]
+font = Monospace 10
+allow_markup = yes
+format = "<b>%s</b>\n%b"
+alignment = left
+show_age_threshold = 60
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = yes
+icon_position = left
+max_icon_size = 32
+progress_bar = true
+progress_bar_height = 5 
+progress_bar_frame_width = 0
+progress_bar_min_width = 280
+progress_bar_max_width = 300
+indicate_hidden = yes
+transparency = 0
+separator_height = 2
+padding = 10
+horizontal_padding = 15
+text_icon_padding = 0
+frame_width = 0
+frame_color = "{{color0}}"
+separator_color = frame
+sort = yes
+idle_threshold = 120
+monitor = 0
+follow = none
+corner_radius = 3
+width = (250, 500)      # Define el ancho de la notificación en píxeles.
+height = (0, 300)     # Define la altura de la notificación en píxeles.
+origin = top-right    # Define la esquina de la pantalla de anclaje.
+offset = 20x20        # Define el desplazamiento desde la esquina de anclaje.
+shrink = no
+notification_limit = 20
+highlight = "{{color12}}"
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+grave
+context = ctrl+shift+period
+
+[urgency_low]
+background = "#1c1c1c"
+#foreground = "{{foreground}}"
+timeout = 5
+
+[urgency_normal]
+background = "{{background}}"
+#foreground = "{{foreground}}"
+timeout = 8
+
+[urgency_critical]
+background = "{{color1}}"
+#foreground = "{{foreground}}"
+timeout = 0

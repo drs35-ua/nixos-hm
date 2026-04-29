@@ -1,0 +1,7 @@
+@define-color themify_bg {{ background }};
+@define-color themify_fg {{ foreground }};
+@define-color themify_selected {{ color4 }};
+@import url("colors-gtk.css");
+* { color: @themify_fg; background-color: @themify_bg; }
+window { background-color: @themify_bg; }
+button { background-color: shade(@themify_bg, 0.9); }
