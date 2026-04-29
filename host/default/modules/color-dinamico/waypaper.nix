@@ -1,32 +1,37 @@
 { config, ... }:
-
 {
-  xdg.configFile."waypaper/config.ini".text = ''
-    [Settings]
-    language = en
-    folder = ~/Pictures/fondos
-    monitors = All
-    wallpaper = ~/Pictures/fondos/wallhaven-zpx3xw.png
-    show_path_in_tooltip = True
-    backend = swww
-    fill = fill
-    sort = daterev
-    color = #3D3846
-    subfolders = False
-    all_subfolders = False
-    show_hidden = False
-    show_gifs_only = False
-    zen_mode = False
-    post_command = ${config.xdg.configHome}/hypr/scripts/update_wallpaper.sh
-    number_of_columns = 3
-    swww_transition_type = any
-    swww_transition_step = 63
-    swww_transition_angle = 0
-    swww_transition_duration = 2
-    swww_transition_fps = 60
-    mpvpaper_sound = False
-    mpvpaper_options = 
-    use_xdg_state = False
-    stylesheet = ~/.config/waypaper/style.css
-  '';
+  xdg.configFile."waypaper/config.ini" = {
+    text = ''
+      [Settings]
+      language = en
+      backend = awww
+      folder = ~/Pictures/fondos
+      monitors = All
+      wallpaper = ~/Pictures/fondos/wallhaven-9o82g1.jpg
+      show_path_in_tooltip = True
+      fill = fill
+      sort = name
+      color = #ffffff
+      subfolders = False
+      all_subfolders = False
+      show_hidden = False
+      show_gifs_only = False
+      zen_mode = False
+      post_command = ~/.config/hypr/scripts/update_wallpaper.sh
+      number_of_columns = 3
+      swww_transition_type = any
+      swww_transition_step = 63
+      swww_transition_angle = 0
+      swww_transition_duration = 2
+      swww_transition_fps = 60
+      mpvpaper_sound = False
+      mpvpaper_options = 
+      use_xdg_state = False
+      stylesheet = /home/dani/.config/waypaper/style.css
+      keybindings = ~/.config/waypaper/keybindings.ini
+
+
+    '';
+    force = true;   # ¡Ahora sí, dentro del objeto!
+  };
 }
