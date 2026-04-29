@@ -11,7 +11,7 @@ imports = [
     ./kitty.nix
     ./waybar.nix
     ./wofi.nix
-    #./dunst.nix
+    ./hyprlauncher.nix
     ./modules/color-dinamico/wallust.nix
     ./modules/color-dinamico/waypaper.nix
     ./modules/color-dinamico/scripts.nix
