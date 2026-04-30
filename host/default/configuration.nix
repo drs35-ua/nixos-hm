@@ -77,7 +77,7 @@ hardware.nvidia = {
     # Activar el menú de configuración de NVIDIA (opcional)
     nvidiaSettings = true;
 
-    # Forzar el uso del driver "stable". 
+    # Forzar el uso del driver "stable".
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
@@ -104,7 +104,7 @@ hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;  # Powers the adapter at boot
     settings = {
-      General = {   
+      General = {
         Name = "MyNixOS-Laptop"; # Your PC's Bluetooth name
         ControllerMode = "dual"; # Supports both BR/EDR and LE
         Experimental = true;   # Required for some features
@@ -180,6 +180,9 @@ fonts.packages = with pkgs; [
   };
 
 home-manager = {
+  #useGlobalPkgs = true;
+  #useUserPackages = true;
+  extraSpecialArgs = { inherit inputs; };
 	users = {
 		"dani" = import ./home.nix;
 	};
@@ -197,7 +200,7 @@ home-manager = {
     #hyprland
     git
     #wofi
-    
+
     firefox
     pamixer
     pavucontrol

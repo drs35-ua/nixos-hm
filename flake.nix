@@ -10,6 +10,13 @@
      };
 
      stylix.url = "github:danth/stylix";
+
+     elephant.url = "github:abenz1267/elephant";
+
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {

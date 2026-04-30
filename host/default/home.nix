@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
   scriptsDir = ./scripts;  # ruta relativa a la carpeta scripts
@@ -11,7 +11,9 @@ imports = [
     ./kitty.nix
     ./waybar.nix
     ./wofi.nix
-    ./hyprlauncher.nix
+    #./hyprlauncher.nix
+     ./walker.nix
+    inputs.walker.homeManagerModules.default
     ./modules/color-dinamico/wallust.nix
     ./modules/color-dinamico/waypaper.nix
     ./modules/color-dinamico/scripts.nix
@@ -30,7 +32,7 @@ imports = [
 
 
 
-  
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -69,7 +71,7 @@ imports = [
 	  dolphin-emu
     protonplus
     thunderbird
-    xdg-user-dirs   
+    xdg-user-dirs
     xdg-user-dirs-gtk
     vscode
     glib
@@ -83,6 +85,10 @@ imports = [
   dunst
   kora-icon-theme
     pulseaudio
+    #elephant
+    zed-editor
+    godot
+    libresprite
   ];
 
 dconf.enable = true;
@@ -98,7 +104,7 @@ dconf.settings = {
   # Configuración de Bash
 programs.bash = {
   enable = true;
-  
+
   # Aquí van tus aliases y otras configuraciones existentes
   shellAliases = {
     ll = "ls -la";
@@ -109,7 +115,7 @@ programs.bash = {
     nixrebuild = "sudo nixos-rebuild switch --flake ~/.nixflakes#nixos";
     nixhome = "nano ~/.nixflakes/host/default/home.nix";
   };
-  
+
   # Personalización del prompt
   initExtra = ''
     # Prompt colorido: usuario@hostname (en verde) y directorio actual (en azul)
@@ -139,11 +145,11 @@ programs.bash = {
       executable = true;
     };
 
-      
+
     ".config/waybar/scripts/weather/ui_icons.json" = {
       source = ./scripts/waybar/weather/ui_icons.json;
     };
-    
+
     ".config/waybar/scripts/weather/weather_icons.json" = {
       source = ./scripts/waybar/weather/weather_icons.json;
     };
@@ -153,7 +159,7 @@ programs.bash = {
 
     ".config/wallust/templates" = {
       source = ./modules/templates;
-      recursive = true; 
+      recursive = true;
     };
 
   };
