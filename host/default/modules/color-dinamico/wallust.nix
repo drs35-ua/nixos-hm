@@ -13,6 +13,7 @@ in {
     waybar = { template = 'waybar.css', target = '~/.config/waybar/colors-wallust.css' }
     dunst = { template = 'dunstrc', target = '~/.config/dunst/dunstrc' }
     hyprland = { template = 'hyprland.conf', target = '~/.config/hypr/wallust-colors.conf' }
+    walker = { template = 'waybar.css', target = '~/.config/walker/themes/matheme/colors-wallust.css' }
   '';
 
   # Copiar los archivos .template desde la carpeta externa

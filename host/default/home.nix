@@ -10,7 +10,7 @@ in
 imports = [
     ./kitty.nix
     ./waybar.nix
-    ./wofi.nix
+    #./wofi.nix
     #./hyprlauncher.nix
      ./walker.nix
     inputs.walker.homeManagerModules.default

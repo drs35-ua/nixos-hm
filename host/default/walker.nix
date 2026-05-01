@@ -6,13 +6,14 @@
     runAsService = true; # Note: This option is not supported in the NixOS module only in the home-manager module
 
     config = {
-      theme = "default";
+      theme = "matheme";
       placeholders."default" = { input = "Search"; list = "Example"; };
       providers.prefixes = [
         {provider = "websearch"; prefix = "+";}
         {provider = "providerlist"; prefix = "_";}
       ];
-      keybinds.quick_activate = ["F1" "F2" "F3"];
+      keybinds.quick_activate = [];
+      hide_action_hints = true;
     };
 
 

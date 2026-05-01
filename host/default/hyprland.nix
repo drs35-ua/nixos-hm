@@ -44,8 +44,8 @@
     ###################
     $terminal = kitty
     $fileManager = nemo
-    $menu = wofi --show drun --sort-order=alphabetical --matching=strict-contains -D drun-ignore_metadata=true
-
+    #$menu = wofi --show drun --sort-order=alphabetical --matching=strict-contains -D drun-ignore_metadata=true
+    #$menu = walker
     #################
     ### AUTOSTART ###
     #################
