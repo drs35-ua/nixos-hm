@@ -33,30 +33,6 @@ nix.gc = {
 };
 
 
-  stylix = {
-    enable = false;
-    # Configuración mínima (imagen de fondo)
-    #image = ./path/to/your/wallpaper.png;
-    # Esquema de colores base16 (opcional pero recomendado)
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml";
-    # Activa estilos para programas compatibles de forma automática (recomendado)
-    autoEnable = true;
-    targets.gnome.enable = false;
-  };
-
-  #stylix.image = /ruta/que/waypaper/te/ha/dado;
-  # Habilitar portales de escritorio (necesario para Wayland y apps GTK)
-#  xdg.portal = {
-#    enable = true;
-#    # Configuración para Hyprland (puedes usar "wlr" si no funciona)
-#    config = {
-#      hyprland.default = [ "hyprland" "gtk" ];
-#    };
-#    extraPortals = with pkgs; [
-#      xdg-desktop-portal-gtk
-#      xdg-desktop-portal-hyprland
-#    ];
-#  };
 
 hardware.graphics = {
     enable = true;

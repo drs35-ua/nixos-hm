@@ -9,7 +9,7 @@
        inputs.nixpkgs.follows = "nixpkgs";
      };
 
-     stylix.url = "github:danth/stylix";
+
 
      elephant.url = "github:abenz1267/elephant";
 
@@ -27,7 +27,6 @@
       modules = [
         ./host/default/configuration.nix
          inputs.home-manager.nixosModules.default
-         inputs.stylix.nixosModules.stylix
       ];
     };
   };
