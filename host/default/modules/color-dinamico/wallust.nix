@@ -2,7 +2,7 @@
 
 let
   # Si quieres los templates como archivos externos (recomendado)
-  templatesDir = ../templates;  # ruta relativa al archivo .nix
+  templatesDir = ./templates;  # ruta relativa al archivo .nix
 in {
   xdg.configFile."wallust/wallust.toml".text = ''
     backend = "fastresize"
@@ -16,8 +16,4 @@ in {
     walker = { template = 'waybar.css', target = '~/.config/walker/themes/matheme/colors-wallust.css' }
   '';
 
-  # Copiar los archivos .template desde la carpeta externa
-  #xdg.configFile."wallust/templates/waybar.css".source = "${templatesDir}/waybar.css.template";
-  #xdg.configFile."wallust/templates/dunstrc".source = "${templatesDir}/dunstrc.template";
-  #xdg.configFile."wallust/templates/hyprland.conf".source = "${templatesDir}/hyprland.conf.template";
 }

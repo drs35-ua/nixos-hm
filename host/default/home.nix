@@ -158,7 +158,7 @@ programs.bash = {
     };
 
     ".config/wallust/templates" = {
-      source = ./modules/templates;
+      source = ./modules/color-dinamico/templates;
       recursive = true;
     };
 
