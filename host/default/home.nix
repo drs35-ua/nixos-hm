@@ -11,7 +11,7 @@ imports = [
     ./kitty.nix
     ./waybar.nix
     #./modules/lanzador/wofi.nix
-    #./hyprlauncher.nix
+    #./modules/lanzador/hyprlauncher.nix
      ./modules/lanzador/walker.nix
     inputs.walker.homeManagerModules.default
     ./modules/color-dinamico/wallust.nix
@@ -65,7 +65,6 @@ imports = [
     udiskie
     ntfs3g
     gnome-calendar
-    hyprlauncher
     adw-gtk3
     nemo-with-extensions
 	  dolphin-emu
