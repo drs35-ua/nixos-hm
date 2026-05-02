@@ -1,0 +1,41 @@
+#!/run/current-system/sw/bin/bash
+
+
+if [ -n "$SUDO_USER" ]; then
+    ORIGINAL_USER="$SUDO_USER"
+else
+    ORIGINAL_USER=$(who am i | awk '{print $1}')
+    [ -z "$ORIGINAL_USER" ] && ORIGINAL_USER="dani"
+fi
+
+# Forzar el entorno gráfico para las notificaciones (como root)
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $ORIGINAL_USER)/bus"
+
+IMAGE_PATH="$1"
+
+if [ -z "$IMAGE_PATH" ] || [ ! -f "$IMAGE_PATH" ]; then
+    su -c "notify-send 'Error' 'Archivo de imagen inválido'" $ORIGINAL_USER
+    exit 1
+fi
+
+DEST_ICON="/var/lib/AccountsService/icons/${ORIGINAL_USER}"
+DEST_USERS="/var/lib/AccountsService/users/${ORIGINAL_USER}"
+
+# Copiar y redimensionar
+cp "$IMAGE_PATH" "$DEST_ICON"
+/run/current-system/sw/bin/convert "$DEST_ICON" -resize '512x512^' -gravity center -extent 512x512 "$DEST_ICON" 2>/dev/null
+#/run/current-system/sw/bin/convert "$DEST_ICON" -resize 512x512 -background none -gravity center -extent 512x512 "$DEST_ICON" 2>/dev/null
+
+if [ -f "$DEST_USERS" ]; then
+    sed -i "s|^Icon=.*|Icon=$DEST_ICON|" "$DEST_USERS"
+else
+    cat > "$DEST_USERS" << EOF2
+[User]
+Icon=$DEST_ICON
+SystemAccount=false
+Session=
+EOF2
+fi
+
+su -c "notify-send 'Éxito' 'Foto de perfil actualizada. Reinicia la sesión.'" $ORIGINAL_USER

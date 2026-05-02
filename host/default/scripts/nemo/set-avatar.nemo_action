@@ -1,0 +1,8 @@
+[Nemo Action]
+Active=true
+Name=Set as profile picture
+Comment=Configura la imagen seleccionada como tu avatar.
+Exec=sudo /home/dani/.local/bin/cambiar-avatar %F
+Selection=s
+Mimetypes=image/*;
+Icon-Name=camera-photo
