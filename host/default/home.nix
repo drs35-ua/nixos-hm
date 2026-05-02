@@ -8,7 +8,7 @@ in
 {
 
 imports = [
-    ./kitty.nix
+    ./modules/terminal/kitty.nix
     ./modules/barra/waybar.nix
     #./modules/lanzador/wofi.nix
     #./modules/lanzador/hyprlauncher.nix
