@@ -7,13 +7,13 @@ in
 
 {
 
-imports = [
+  imports = [
+    inputs.walker.homeManagerModules.default
     ./modules/terminal/kitty.nix
     ./modules/barra/waybar.nix
     #./modules/lanzador/wofi.nix
     #./modules/lanzador/hyprlauncher.nix
-     ./modules/lanzador/walker.nix
-    inputs.walker.homeManagerModules.default
+    ./modules/lanzador/walker.nix
     ./modules/color-dinamico/wallust.nix
     ./modules/color-dinamico/waypaper.nix
     ./modules/color-dinamico/scripts.nix
@@ -28,9 +28,6 @@ imports = [
     enable = true;
     extraConfig = builtins.readFile ./modules/window-manager/hyprland.conf;
   };
-
-
-
 
 
   # This value determines the Home Manager release that your configuration is
@@ -75,54 +72,46 @@ imports = [
     vscode
     glib
     gsettings-desktop-schemas
-	fastfetch
+    fastfetch
     dconf
     mission-center
     resources
-	#themechanger
-	xdg-desktop-portal-gtk
-  dunst
-  kora-icon-theme
+    xdg-desktop-portal-gtk
+    dunst
+    kora-icon-theme
     pulseaudio
-    #elephant
     zed-editor
     godot
     libresprite
   ];
 
-dconf.enable = true;
+  dconf.enable = true;
 
-dconf.settings = {
-  "org/gnome/desktop/interface" = {
-    color-scheme = "prefer-dark";
-  };
-};
-
-
-    # Configuración de Bash (manera correcta en Home Manager actual)
-  # Configuración de Bash
-programs.bash = {
-  enable = true;
-
-  # Aquí van tus aliases y otras configuraciones existentes
-  shellAliases = {
-    ll = "ls -la";
-    la = "ls -a";
-    l = "ls -l";
-    # Tus alias nix
-    nixconf = "nano ~/.nixflakes/host/default/configuration.nix";
-    nixrebuild = "sudo nixos-rebuild switch --flake ~/.nixflakes#nixos";
-    nixhome = "nano ~/.nixflakes/host/default/home.nix";
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
   };
 
-  # Personalización del prompt
-  initExtra = ''
-    # Prompt colorido: usuario@hostname (en verde) y directorio actual (en azul)
-    export PS1="\[\033[32m\]\u@\h\[\033[0m\]:\[\033[34m\]\w\[\033[0m\]\$ "
-  '';
-};
 
-  #stylix.targets.waybar.enable = true;
+
+  programs.bash = {
+    enable = true;
+
+    shellAliases = {
+      ll = "ls -la";
+      la = "ls -a";
+      l = "ls -l";
+      nixconf = "nano ~/.nixflakes/host/default/configuration.nix";
+      nixrebuild = "sudo nixos-rebuild switch --flake ~/.nixflakes#nixos";
+      nixhome = "nano ~/.nixflakes/host/default/home.nix";
+    };
+
+    initExtra = ''
+      # Prompt colorido: usuario@hostname (en verde) y directorio actual (en azul)
+      export PS1="\[\033[32m\]\u@\h\[\033[0m\]:\[\033[34m\]\w\[\033[0m\]\$ "
+    '';
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
