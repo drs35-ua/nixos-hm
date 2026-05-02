@@ -12,7 +12,7 @@ imports = [
     ./waybar.nix
     #./wofi.nix
     #./hyprlauncher.nix
-     ./walker.nix
+     ./modules/lanzador/walker.nix
     inputs.walker.homeManagerModules.default
     ./modules/color-dinamico/wallust.nix
     ./modules/color-dinamico/waypaper.nix
