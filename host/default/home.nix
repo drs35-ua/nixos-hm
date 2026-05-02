@@ -9,7 +9,7 @@ in
 
 imports = [
     ./kitty.nix
-    ./waybar.nix
+    ./modules/barra/waybar.nix
     #./modules/lanzador/wofi.nix
     #./modules/lanzador/hyprlauncher.nix
      ./modules/lanzador/walker.nix
@@ -26,7 +26,7 @@ imports = [
 
   wayland.windowManager.hyprland = {
     enable = true;
-    extraConfig = builtins.readFile ./hyprland.conf;
+    extraConfig = builtins.readFile ./modules/window-manager/hyprland.conf;
   };
 
 
