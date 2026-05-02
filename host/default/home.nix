@@ -151,6 +151,15 @@ in
       recursive = true;
     };
 
+    ".local/bin/cambiar-avatar" = {
+      source = ./scripts/nemo/cambiar-avatar;
+      executable = true;
+    };
+
+    ".local/share/nemo/actions/set-avatar.nemo_action" = {
+      source = ./scripts/nemo/set-avatar.nemo_action;
+    };
+
   };
 
   # Home Manager can also manage your environment variables through

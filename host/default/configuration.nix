@@ -59,7 +59,11 @@ hardware.nvidia = {
 
 hardware.nvidia.powerManagement.enable = true;
 
-
+security.sudo.extraRules = [
+  { users = [ "dani" ];
+    commands = [ { command = "/home/dani/.local/bin/cambiar-avatar"; options = [ "NOPASSWD" ]; } ];
+  }
+];
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
