@@ -83,6 +83,7 @@ in
     zed-editor
     godot
     libresprite
+    easyeffects
   ];
 
   dconf.enable = true;
